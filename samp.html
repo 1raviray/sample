@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.2-dist/css/bootstrap.css"
+    />
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Layout */
+        .row {
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .break {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Sticky Menu */
+        .menu-container {
+            position: sticky;
+            top: 100px; /* Adjust as needed */
+            align-self: flex-start;
+            height: auto;
+        }
+
+        .list-unstyled {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            height: auto;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            transition: all 0.5s linear;
+            position: absolute;
+        }
+
+        .menu-item span {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(0, -50%);
+            color: #212121;
+            font-size: 31.62px;
+            font-family: Aboreto;
+            font-weight: 400;
+            text-transform: uppercase;
+            word-wrap: break-word;
+        }
+
+        .menu-item .div1 {
+            width: 390px;
+            height: 105px;
+            transform: rotate(-2deg);
+            transform-origin: top left;
+            background: #ecddc9;
+            border-radius: 18.96px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Positioning of Menu Items */
+        .menu-item:nth-child(2) {
+            top: 13%;
+            left: 15%;
+            transform: rotate(4deg);
+        }
+
+        .menu-item:nth-child(3) {
+            top: 29%;
+            left: 8%;
+            transform: rotate(-8deg);
+        }
+
+        .menu-item:nth-child(4) {
+            top: 42%;
+            left: 25%;
+        }
+
+        /* Section Styling */
+        .changed {
+            height: 70vh;
+        }
+
+        .changed p {
+            text-indent: 150px;
+            text-align: justify;
+            color: #353535;
+            font-size: 22px;
+            font-family: Afacad;
+            font-weight: 400;
+            text-transform: capitalize;
+            word-wrap: break-word;
+        }
+
+        /* Stop Sticky at Last Section */
+        .content-wrapper::after {
+            content: "";
+            display: block;
+            height: 150px; /* Creates space where sticky stops */
+        }
+
+        /* Active States */
+        .menu-item.active1 .div1 {
+            background: #d4b8a8; /* Highlight active */
+        }
+
+        .menu-item.active1 span {
+            font-weight: bold;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <!-- Sticky Menu Column -->
+        <div class="col-12 col-md-12 col-lg-12 col-xl-12 break">
+            <div class="menu-container">
+                <ul class="list-unstyled position-relative mx-auto d-flex w-100">
+                    <li class="menu-item active1" data-target="section1">
+                        <div class="position-relative div1 active2" data-target="section1">
+                            <img class="position-absolute menuImg1" src="./Assets/image 9.png" />
+                            <span class="">Brief</span>
+                        </div>
+                    </li>
+                    <li class="menu-item" data-target="section2">
+                        <div class="position-relative div1" data-target="section2">
+                            <img class="position-absolute menuImg2" src="./Assets/image 10.png" />
+                            <span class="">Research</span>
+                        </div>
+                    </li>
+                    <li class="menu-item" data-target="section3">
+                        <div class="position-relative div1" data-target="section3">
+                            <img class="position-absolute menuImg3" src="./Assets/image 11.png" />
+                            <span class="">Design</span>
+                        </div>
+                    </li>
+                    <li class="menu-item" data-target="section4">
+                        <div class="position-relative div1" data-target="section4">
+                            <img class="position-absolute menuImg4" src="./Assets/image 13.png" />
+                            <span class="">Test & Iterate</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="col-12 col-md-12 col-lg-12 col-xl-12 break">
+            <section class="changed" id="section1">
+                <p>The brief is where I dive into understanding you, your business, and your users.</p>
+            </section>
+            <section class="changed" id="section2">
+                <p>At this stage, I dive into understanding your audience...</p>
+            </section>
+            <section class="changed" id="section3">
+                <p>Using the insights gathered, I start shaping ideas...</p>
+            </section>
+            <section class="changed" id="section4">
+                <p>I run multiple rounds of testing...</p>
+            </section>
+        </div>
+    </div>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi incidunt iure veritatis? Nobis harum totam cupiditate fugiat labore minima nisi quos veritatis, nam aut excepturi vitae reiciendis magni recusandae modi!</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".changed");
+            const menuItems = document.querySelectorAll(".menu-item");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            menuItems.forEach((item) => item.classList.remove("active1"));
+                            const activeItem = document.querySelector(
+                                `.menu-item[data-target="${entry.target.id}"]`
+                            );
+                            if (activeItem) activeItem.classList.add("active1");
+                        }
+                    });
+                },
+                {
+                    root: null, // viewport
+                    threshold: 0.5, // Trigger when 50% of section is visible
+                }
+            );
+
+            sections.forEach((section) => observer.observe(section));
+
+            // Sticky stop function
+            const menuContainer = document.querySelector(".menu-container");
+            const lastSection = document.querySelector("#section4");
+
+            function checkStickyStop() {
+                const rect = lastSection.getBoundingClientRect();
+                if (rect.bottom <= window.innerHeight - 150) {
+                    menuContainer.style.position = "relative";
+                } else {
+                    menuContainer.style.position = "sticky";
+                    menuContainer.style.top = "100px"; // Adjust as needed
+                }
+            }
+
+            window.addEventListener("scroll", checkStickyStop);
+        });
+    </script>
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

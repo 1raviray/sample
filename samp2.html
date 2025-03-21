@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Top Menu with Scroll</title>
+    <style>
+        /* Sticky Menu Bar */
+        .menu-container {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .list-unstyled {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu-item {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #ecddc9;
+            border-radius: 18.96px;
+            transition: all 0.3s ease-in-out;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .menu-item.active1 {
+            background: #d4b8a8;
+            color: white;
+        }
+
+        /* Section Styling */
+        .content-wrapper {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .changed {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            font-size: 22px;
+            font-family: Arial, sans-serif;
+            font-weight: 400;
+            color: #353535;
+            border-bottom: 1px solid #ccc;
+            padding: 50px;
+        }
+
+        /* Stop Sticky at Last Section */
+        .content-wrapper::after {
+            content: "";
+            display: block;
+            height: 100px; /* Creates space where sticky stops */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Menu at the Top -->
+    <div class="menu-container">
+        <ul class="list-unstyled">
+            <li class="menu-item active1" data-target="section1">Brief</li>
+            <li class="menu-item" data-target="section2">Research</li>
+            <li class="menu-item" data-target="section3">Design</li>
+            <li class="menu-item" data-target="section4">Test & Iterate</li>
+        </ul>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content-wrapper">
+        <section class="changed" id="section1">
+            <p>The brief is where I dive into understanding you, your business, and your users.</p>
+        </section>
+        <section class="changed" id="section2">
+            <p>At this stage, I dive into understanding your audience...</p>
+        </section>
+        <section class="changed" id="section3">
+            <p>Using the insights gathered, I start shaping ideas...</p>
+        </section>
+        <section class="changed" id="section4">
+            <p>I run multiple rounds of testing...</p>
+        </section>
+    </div>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos harum minus deleniti dolores expedita voluptatibus explicabo nisi obcaecati, optio consequuntur cum dicta aliquam ipsam distinctio repellendus omnis tempore aspernatur quidem.</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".changed");
+            const menuItems = document.querySelectorAll(".menu-item");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            menuItems.forEach((item) => item.classList.remove("active1"));
+                            const activeItem = document.querySelector(
+                                `.menu-item[data-target="${entry.target.id}"]`
+                            );
+                            if (activeItem) activeItem.classList.add("active1");
+                        }
+                    });
+                },
+                {
+                    root: null, // viewport
+                    threshold: 0.5, // Trigger when 50% of section is visible
+                }
+            );
+
+            sections.forEach((section) => observer.observe(section));
+            const lastSection = document.querySelector("#section4");
+            const menuContainer = document.querySelector(".menu-container");
+            
+            function checkStickyStop() {
+                const rect = lastSection.getBoundingClientRect();
+                if (rect.bottom <= window.innerHeight - 150) {
+                    menuContainer.style.position = "relative";
+                } else {
+                    menuContainer.style.position = "sticky";
+                    menuContainer.style.top = "100px"; // Adjust as needed
+                }
+            }
+
+            window.addEventListener("scroll", checkStickyStop);
+            // Scroll to section on menu click
+            menuItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const targetSection = document.getElementById(this.getAttribute("data-target"));
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
