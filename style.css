@@ -14,7 +14,12 @@
 }
 body {
   background-color: #f3eee5 !important;
+  overflow:hidden
 }
+input {
+  touch-action: manipulation;
+}
+
 .navbar-brand {
   color: #212121;
   font-size: 25.2px;
