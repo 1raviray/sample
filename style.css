@@ -14,7 +14,6 @@
 }
 body {
   background-color: #f3eee5 !important;
-  overflow:hidden
 }
 input {
   touch-action: manipulation;
