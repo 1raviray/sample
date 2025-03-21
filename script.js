@@ -115,3 +115,8 @@ window.addEventListener('scroll', () => {
     moveTop.classList.remove("top");
   }
 });
+
+
+window.addEventListener("resize", () => {
+  document.body.style.height = window.innerHeight + "px";
+});
